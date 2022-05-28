@@ -1,0 +1,19 @@
+.product {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+}
+
+.productInfo .price {
+  color: tomato;
+}
+
+.productInfo h1 {
+  color: royalblue;
+  margin-bottom: 10px;
+}
+
+.productInfo p {
+  line-height: 1.4;
+  color: #444;
+}

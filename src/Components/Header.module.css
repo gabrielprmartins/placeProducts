@@ -1,0 +1,37 @@
+.header {
+  box-shadow: 2px 4px 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+.headerContainer {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.4rem;
+}
+
+.logo span {
+  font-size: 1rem;
+  color: royalblue;
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu ul li a {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.menu ul li a:hover {
+  color: royalblue;
+}

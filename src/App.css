@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #222;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+.container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.animeUp {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: animeUp 0.3s forwards;
+}
+
+@keyframes animeUp {
+  to {
+    opacity: initial;
+    transform: initial;
+  }
+}
