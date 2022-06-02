@@ -18,7 +18,8 @@
 }
 
 .product:hover {
-  box-shadow: 2px 4px 20px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 4px 20px 0 rgba(65, 105, 225, 0.35);
+  transform: scale(1.05);
 }
 
 .product h2 {
@@ -39,4 +40,15 @@
 .product img {
   margin-bottom: 20px;
   max-width: 100px;
+}
+
+.mainTitle {
+  font-size: 3.1rem;
+  text-align: center;
+  margin-top: -30px;
+  margin-bottom: 30px;
+}
+
+.mainTitle span {
+  color: royalblue;
 }

@@ -30,5 +30,6 @@
 }
 
 .github:hover {
-  box-shadow: 2px 4px 20px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 4px 20px 0 rgba(65, 105, 225, 0.35);
+  transform: scale(1.05);
 }

@@ -34,6 +34,9 @@ const Products = () => {
         title="placeProducts"
         description="placeProducts - The most company of Products in America Latina."
       />
+      <h1 className={styles.mainTitle}>
+        Find your products <span>more easily</span>
+      </h1>
       <div className={styles.products}>
         {data.map(({ id, image, title, price }) => (
           <Link to={`product/${id}`} className={styles.product} key={id}>
