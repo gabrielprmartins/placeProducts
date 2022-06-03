@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Head from "./Head";
 import styles from "./Products.module.css";
 import Loading from "./Loading";
+import AddToCartButton from "./AddToCartButton";
 
 const Products = () => {
   const [data, setData] = React.useState(null);
@@ -38,12 +39,19 @@ const Products = () => {
         Find your products <span>more easily</span>
       </h1>
       <div className={styles.products}>
-        {data.map(({ id, image, title, price }) => (
-          <Link to={`product/${id}`} className={styles.product} key={id}>
-            <img src={image} alt={title} />
-            <h2>{title}</h2>
+        {data.map((product) => (
+          <Link
+            to={`product/${product.id}`}
+            className={styles.product}
+            key={product.id}
+          >
+            <AddToCartButton data={product} classButton="pageProducts">
+              Add To Cart
+            </AddToCartButton>
+            <img src={product.image} alt={product.title} />
+            <h2>{product.title}</h2>
             <p>
-              {price.toLocaleString("pt-BR", {
+              {product.price.toLocaleString("pt-BR", {
                 style: "currency",
                 currency: "BRL"
               })}
