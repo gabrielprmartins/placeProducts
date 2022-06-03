@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Head from "./Head";
 import styles from "./Product.module.css";
 import Loading from "./Loading";
+import { CartContext } from "../Context/CartContext";
 
 const Product = () => {
   const { id } = useParams();
@@ -10,6 +11,12 @@ const Product = () => {
   const [data, setData] = React.useState(null);
   const [error, setError] = React.useState(null);
   const [loading, setLoading] = React.useState(false);
+
+  const add = React.useContext(CartContext).add;
+
+  function handleClick() {
+    add(data);
+  }
 
   React.useState(() => {
     async function fetchData(url) {
@@ -46,6 +53,7 @@ const Product = () => {
         </p>
         <h1>{data.title}</h1>
         <p>{data.description}</p>
+        <button onClick={handleClick}>Add to Cart</button>
       </div>
     </section>
   );
