@@ -40,23 +40,25 @@ const Products = () => {
       </h1>
       <div className={styles.products}>
         {data.map((product) => (
-          <Link
-            to={`product/${product.id}`}
-            className={styles.product}
-            key={product.id}
-          >
+          <div className={styles.productContainer}>
             <AddToCartButton data={product} classButton="pageProducts">
               Add To Cart
             </AddToCartButton>
-            <img src={product.image} alt={product.title} />
-            <h2>{product.title}</h2>
-            <p>
-              {product.price.toLocaleString("pt-BR", {
-                style: "currency",
-                currency: "BRL"
-              })}
-            </p>
-          </Link>
+            <Link
+              to={`product/${product.id}`}
+              className={styles.product}
+              key={product.id}
+            >
+              <img src={product.image} alt={product.title} />
+              <h2>{product.title}</h2>
+              <p>
+                {product.price.toLocaleString("pt-BR", {
+                  style: "currency",
+                  currency: "BRL"
+                })}
+              </p>
+            </Link>
+          </div>
         ))}
       </div>
     </section>

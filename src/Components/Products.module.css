@@ -5,6 +5,11 @@
   justify-content: center;
 }
 
+.productContainer {
+  display: flex;
+  position: relative;
+}
+
 .product {
   max-width: 173px;
   height: auto;
