@@ -6,6 +6,8 @@ import { CartContext } from "../Context/CartContext";
 const Header = () => {
   const { cart } = React.useContext(CartContext);
 
+  // Cart {cart.length}
+
   return (
     <header className={styles.header}>
       <div className={styles.headerContainer}>
@@ -18,7 +20,7 @@ const Header = () => {
               <NavLink to="about">About</NavLink>
             </li>
             <li>
-              <NavLink to="cart">Cart {cart.length}</NavLink>
+              <NavLink to="login">Login</NavLink>
             </li>
           </ul>
         </nav>
